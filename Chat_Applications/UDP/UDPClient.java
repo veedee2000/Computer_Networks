@@ -10,7 +10,7 @@ public class UDPClient{
 		BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 		String sentence = inFromUser.readLine();
 		DatagramSocket clientSocket = new DatagramSocket();
-		InetAddress IPAddress = InetAddress.getByName("192.168.1.6");
+		InetAddress IPAddress = InetAddress.getByName("*Put IP Address*");
 		sendData = sentence.getBytes();
 		DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 3333);
 		clientSocket.send(sendPacket);
